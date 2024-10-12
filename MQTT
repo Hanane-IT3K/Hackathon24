@@ -1,0 +1,87 @@
+import random
+import time
+import math
+import paho.mqtt.client as mqtt
+from datetime import datetime
+
+
+# Konfiguration für den MQTT-Broker
+config = {
+
+
+    "broker_address": "test.mosquitto.org", 
+    "broker_port": 1883,
+    "topic": "sensor/temperature",
+    "client_id": "Tmqttx_4c91a353",
+    "qos": 1
+}
+
+
+# MQTT-Client initialisieren
+client = mqtt.Client(config["client_id"])
+
+
+# Fehler-Callback, falls Verbindung fehlschlägt
+def on_connect(client, userdata, flags, rc):
+    if rc == 0:
+        print("Connected to MQTT Broker!")
+    else:
+        print(f"Failed to connect, return code {rc}")
+
+
+client.on_connect = on_connect
+
+
+# Verbindung zum Broker herstellen
+client.connect(config["broker_address"], config["broker_port"])
+
+
+# Starten der MQTT-Schleife, um die Verbindung aufrechtzuerhalten
+client.loop_start()
+
+
+# Funktion zur Simulation realistischer Temperaturdaten
+def generate_realistic_temperature(hour):
+    # Simuliere tageszeitliche Schwankungen mit einer Sinuskurve
+    # Angenommene maximale Temperatur am Tag und minimale Temperatur in der Nacht
+    min_temp = 10  # Minimum in der Nacht (z.B. 10°C)
+    max_temp = 25  # Maximum am Tag (z.B. 25°C)
+
+
+    # Verwende eine Sinusfunktion, um die Tageszeit zu simulieren: um 15 Uhr ist es am wärmsten, um 3 Uhr am kühlsten
+    temp_variation = (max_temp - min_temp) / 2
+    base_temp = (max_temp + min_temp) / 2
+
+
+    # Simuliere eine Sinuskurve für die Temperatur basierend auf der Uhrzeit
+    temperature = base_temp + temp_variation * math.sin(math.pi * (hour - 3) / 12)
+
+
+    # Kleine zufällige Abweichungen hinzufügen, um die Temperatur dynamischer zu machen
+    temperature += random.uniform(-1, 1)
+    
+    return round(temperature, 2)
+
+
+# Temperaturdaten kontinuierlich veröffentlichen
+try:
+    while True:
+        # Aktuelle Stunde ermitteln (simuliert den Tagesablauf)
+        current_time = datetime.now()
+        current_hour = current_time.hour
+        
+        # Realistische Temperatur basierend auf der Tageszeit berechnen
+        temperature = generate_realistic_temperature(current_hour)
+        message = f"Temperature: {temperature}°C"
+        
+        # Senden der simulierten Temperaturdaten an den MQTT-Broker
+        client.publish(config["topic"], message, qos=config["qos"])
+        print(f"Published: {message} to topic {config['topic']}")
+        
+        # Warte 15 Sekunden, bevor neue Daten gesendet werden (du kannst diesen Wert anpassen)
+        time.sleep(15)
+except KeyboardInterrupt:
+    print("Simulation beendet.")
+    client.loop_stop()
+    client.disconnect()
+
