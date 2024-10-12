@@ -1,0 +1,173 @@
+Team 8 :  Improving weather detection
+
+Our team 8  is a dynamic and diverse group, each member bringing a unique skill set and personality to the table. Together, we tackle challenges head-on with creativity, leadership, and a passion for success.
+
+Ryjan Alabed – Scrum Master & Team Leader Ryjan is the driving force behind our projects, not only as our Scrum Master but also as our Team Leader. Known for his love of adventure, Ryjan thrives in dynamic environments and is always ready to embrace challenges with enthusiasm. He ensures the team stays organized, motivated, and aligned towards achieving our goals.
+
+Hanane Mouhassin – Project Owner Hanane plays the crucial role of Project Owner, overseeing the project’s direction and ensuring that we meet the needs of our stakeholders. She's no stranger to problem-solving and is adept at tackling any issues that arise, guiding the team toward success even in the face of difficulties.
+
+Sidra Alchhabi – Design Thinker Sidra is our team's Design Thinker, a creative mind who focuses on finding innovative solutions and ensuring that the user experience is always top-notch. More than that, she acts as the team's protector—keeping us grounded and making sure we're all looking out for each other as we work toward our common goals.
+
+1-DIY Problem Definition
+
+What is the key issue you are trying to address and why is it important?	
+-Improving farm efficiency through automation and IoT to handle tasks like frost protection, pest detection, and water management.
+Who is it a problem for?	
+-Farmers and plantation owners, especially those managing large-scale or remote farms, and small agricultural businesses facing high tech investment costs.
+What social/cultural factors shape this problem?	
+-Growing demand for sustainable farming.
+-Labor shortages in rural areas.
+-Push for tech adoption to lower environmental impact.
+
+What evidence do you have that this is worth the investment?	
+-Successful case studies show improved yields, reduced resource use, and lower labor costs through automation. Research backs the efficiency gains from precision farming.
+Can you think of this problem in a different way? Can you reframe it?
+-See it as an opportunity for collaboration between farmers, tech companies, and environmental bodies to develop sustainable, cost-effective solutions for the agricultural sector.
+
+2-Empathy-Map
+
+1. WHO are we empathizing with?
+We are empathizing with fruit growers and farm managers who rely on precise weather data to protect their crops from frost, manage water resources efficiently, and improve overall farm operations using advanced technology.
+
+2. What do they need to DO?
+They need to:
+	•	Automate the collection and analysis of weather data to prevent frost damage.
+	•	Monitor tree health and detect issues like pests.
+	•	Use autonomous systems for irrigation, frost protection, and data management.
+	•	Ensure network connectivity in remote areas for IoT systems.
+	•	Maintain and calibrate sensors for accurate readings.
+	•	Manage costs effectively, especially for smaller operations.
+
+3. What do they HEAR?
+They hear:
+	•	Discussions about automation in agriculture and its benefits.
+	•	Concerns about the high cost of IoT system implementation.
+	•	Feedback from others about the challenges of maintaining accuracy in sensor data and AI systems.
+	•	News about innovations in pest detection and water management.
+
+4. What do they SEE?
+They see:
+	•	Manual labor for data collection and farm operations, which is time-consuming.
+	•	Advanced solutions like IoT sensors and autonomous vehicles in use on larger farms.
+	•	Difficulty in maintaining network connections in remote areas, impacting system effectiveness.
+	•	Increasing pressure to implement digital solutions for farm management.
+
+5. What do they SAY?
+They say:
+	•	"We need systems that are cost-effective and reliable."
+	•	"It’s challenging to ensure the accuracy of our data and keep up with maintenance."
+	•	"We are concerned about investment costs for these new technologies."
+	•	"How do we ensure stable connectivity in remote areas?"
+	•	"The potential for automation is promising but requires fine-tuning."
+
+6. What do they DO?
+They:
+	•	Invest in sensor boxes and autonomous systems for their farms.
+	•	Regularly calibrate equipment and sensors to maintain accuracy.
+	•	Work on integrating AI to predict and prevent crop issues like frost and pest infestations.
+	•	Monitor and manage their water and frost protection systems.
+	•	Explore ways to automate data collection and decision-making processes.
+
+7. What do they THINK and FEEL?
+
+PAINS (Challenges):
+	•	Manual Data Collection: Time-consuming and inefficient for large plantations.
+	•	Robustness of Technology: IoT devices need to be weatherproof and energy-efficient.
+	•	AI Training: AI models need extensive and balanced datasets to detect pests accurately.
+	•	Network Connectivity: Remote locations make it hard to maintain stable LoRaWAN connections.
+	•	Infrastructure Costs: High initial investment and maintenance costs for IoT systems.
+	•	Navigation Challenges: Autonomous systems struggle in uneven terrain or densely overgrown areas.
+	•	Calibration: Regular sensor calibration is needed for accurate data collection.
+
+GAINS (Value):
+	•	Efficiency: Automated systems save time and labor.
+	•	Improved Decision-Making: Real-time data provides better insights into tree health and necessary interventions.
+	•	Cost Savings: Efficient water management reduces resource waste.
+	•	Sustainability: AI and IoT solutions contribute to more sustainable agriculture.
+	•	Enhanced Accuracy: GPS with 1-2 cm precision improves navigation and farm operations 
+
+3-Observation AEIOU
+
+Activities	
+-Data collection and monitoring
+-Water management and frost protection
+-Prediction models
+-Autonomous systems
+
+Environment
+-Orchards and plantations
+-Remote and rural settings
+-Variable climate conditions
+
+Interaction
+-Human-to-IoT device interaction
+-Human-to-AI interaction:
+-Human-to-autonomous systems
+
+Object	
+-IoT sensors and devices
+-Autonomous vehicles
+-Control systems
+
+Users	
+-Farm owners and managers
+-Farm workers
+-Agricultural technology providers
+-Researchers and developers
+
+4-Problem-Tree
+
+Causes (Roots):
+	0.	Manual data collection is labor-intensive and time-consuming.
+	0.	High investment costs for IoT sensors and AI systems.
+	0.	Inconsistent sensor calibration leading to inaccurate data.
+	0.	Connectivity issues in remote areas affecting sensor communication.
+	0.	Autonomous vehicles struggle to navigate uneven or dense terrain.
+	0.	Lack of pre-trained AI algorithms for pest detection.
+	0.	Energy inefficiency in operating IoT devices autonomously.
+Effects (Branches/Leaves):
+	0.	Increased labor costs for manual processes.
+	0.	Inefficient resource usage (water, energy).
+	0.	Crop losses due to inaccurate pest detection and insufficient frost protection.
+	0.	Barriers to adopting advanced technology for smaller farms.
+	0.	Decreased productivity due to navigation issues in autonomous vehicles.
+	0.	Operational inefficiencies causing lower crop yield and profitability.
+This framework helps you break down the problem into causes and effects, making it easier to develop targeted solutions for each root cause.
+
+5-Business Model Canvas for Frost Protection System
+
+Explanation of Key Elements:
+Key Partners: IoT suppliers, network providers, and software platforms like Datacake or Grafana play a crucial role in delivering the service.
+Key Activities: Focuses on sensor deployment, data collection, processing, and sending frost alerts to protect crops.
+Key Resources: This includes the physical IoT devices (sensors, gateways) as well as software and data platforms.
+Value Propositions: The primary value is to help farmers monitor and mitigate frost risks to prevent crop loss.
+Customer Relationships: Customers can access personalized data insights, real-time monitoring, and receive automatic alerts when frost risks are detected.
+Channels: The system communicates via mobile apps, web dashboards, and SMS notifications.
+Customer Segments: Targets farmers, agricultural cooperatives, and other large-scale farming operations that need frost protection.
+Cost Structure: The costs focus on hardware installation, cloud services, and software maintenance.
+Revenue Streams: Revenue comes from subscription services, installation fees, and additional premium features.
+
+-Key Partners	                                       -Key Activities	                               -Key Resources
+- IoT hardware suppliers (sensors, gateways)	       - Sensor deployment and maintenance      	     - Temperature and soil sensors
+- LoRaWAN network providers	                         - Data collection and processing	               - LoRaWAN gateways
+- Cloud service providers (e.g., Datacake, Grafana)	 - Real-time monitoring of environmental data	   - Cloud servers for data storage and analysis
+- Agriculture cooperatives                        	 - Sending frost alerts to farmers	             - Notification systems (SMS, mobile app)
+- Software developers (for customization)	           - System integration and data visualization	   - Data visualization platforms (Grafana, Datacake
+
+
+-Value Propositions                     	   -Customer Relationships	         -Channels
+- Real-time monitoring of frost risk	       - Personalized support	           - Mobile app
+- Early frost detection and alerts	         - 24/7 data access via dashboard	 - Web-based dashboard
+- Data visualization and historical trends	 - Automated alert system	         - SMS alerts
+- Cost-effective protection for crops	       - Self-service data analytics	   - Email notifications
+
+-Customer Segments	                   -Cost Structure                                 	-Revenue Streams
+- Orchard owners and fruit farmers	   - Sensor and gateway setup costs	                 - Subscription fees for data services
+- Agricultural cooperatives	           - Cloud storage and processing fees	             - One-time sensor installation fees
+- Large-scale farming operations       - Maintenance and updates for IoT devices	       - Premium real-time monitoring features
+- Government agricultural agencies	   - Software development for data integration	     - Consultancy and integration services
+
+6-Our Ideas for solutions 
+Place weather and precipitation measurment arduino in different places for better forecast
+
+
