@@ -1,0 +1,29 @@
+@startuml
+actor Farmer
+actor "Temperature Sensor" as TempSensor
+actor "Soil Sensor" as SoilSensor
+actor "LoRa Gateway" as Gateway
+actor "Server" as Server
+actor "Notification System" as Notification
+
+rectangle "Frost Protection System" {
+  Farmer --> (Monitor Real-Time Data)
+  Farmer --> (Receive Frost Alerts)
+  Farmer --> (Configure Alert Thresholds)
+  Farmer --> (View Historical Data)
+  Farmer --> (Add New Sensors)
+  Farmer --> (Access Dashboard)
+
+  TempSensor --> (Send Temperature Data)
+  SoilSensor --> (Send Soil Data)
+  Gateway --> (Transmit Data to Server)
+  Server --> (Process and Store Data)
+  Notification --> (Send Alerts)
+  
+  (Send Temperature Data) --> (Monitor Real-Time Data) : << include >>
+  (Send Soil Data) --> (Monitor Real-Time Data) : << include >>
+  (Process and Store Data) --> (Monitor Real-Time Data) : << include >>
+  (Send Alerts) --> (Receive Frost Alerts) : << include >>
+}
+
+@enduml
